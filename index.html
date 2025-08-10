@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Inventory System</h1>
+<button id="exportBtn">Export to Excel</button>
+<button id="exportBtn">Export to Excel</button>
+<input type="file" id="importFile" accept=".xlsx, .xls">
+
+
+  <!-- Table of products -->
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Initial Stock</th>
+        <th>Current Stock</th>
+        <th>Minimum Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>P001</td>
+        <td>HB Pencil</td>
+        <td>Stationery</td>
+        <td>100</td>
+        <td>100</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>P002</td>
+        <td>A4 Notebook</td>
+        <td>Stationery</td>
+        <td>50</td>
+        <td>50</td>
+        <td>15</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Form for movements -->
+  <h2>Add Movement</h2>
+  <form id="movementForm">
+    <input type="text" id="productId" placeholder="Product ID" required>
+    <select id="type">
+      <option value="entry">Entry</option>
+      <option value="exit">Exit</option>
+    </select>
+    <input type="number" id="quantity" placeholder="Quantity" required>
+    <button type="submit">Add</button>
+  </form>
+  <h2>Add New Product</h2>
+<form id="productForm">
+  <input type="text" id="newId" placeholder="Product ID" required>
+  <input type="text" id="newName" placeholder="Product Name" required>
+  <input type="text" id="newCategory" placeholder="Category" required>
+  <input type="number" id="newInitial" placeholder="Initial Stock" required>
+  <input type="number" id="newMin" placeholder="Minimum Stock" required>
+  <button type="submit">Add Product</button>
+</form>
+
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
